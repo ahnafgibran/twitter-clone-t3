@@ -1,9 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
-import { trpc } from "../utils/trpc";
 import Timeline from "../components/Timeline";
 
 const Home: NextPage = () => {
@@ -16,9 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <button className='bg-blue-500 px-3 py-2 rounded text-white m-3' onClick={() => signIn()}>Login</button>
-
-        <Timeline/>
+        <Timeline />
       </div>
     </>
   );
